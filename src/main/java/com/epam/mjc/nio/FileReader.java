@@ -12,7 +12,7 @@ public class FileReader {
 
     public Profile getDataFromFile(File file) {
         Profile profile = new Profile();
-        String[] data = readDataToString(file).split("\\r\\n|[\\r\\n ]");;
+        String[] data = readDataToString(file).split("\\r\\n|[\\r\\n ]");
 
         for (int i = 0; i < data.length; i++) {
             switch (data[i]) {
@@ -48,8 +48,6 @@ public class FileReader {
             for (int i = 0; i < fileSize; i++) {
                 data.append((char) buffer.get());
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
