@@ -1,7 +1,6 @@
 package com.epam.mjc.nio;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -17,16 +16,16 @@ public class FileReader {
         for (int i = 0; i < data.length; i++) {
             switch (data[i]) {
                 case "Name:":
-                    profile.setName(data[i+1]);
+                    profile.setName(data[i + 1]);
                     break;
                 case "Age:":
-                    profile.setAge(Integer.parseInt(data[i+1]));
+                    profile.setAge(Integer.parseInt(data[i + 1]));
                     break;
                 case "Email:":
-                    profile.setEmail(data[i+1]);
+                    profile.setEmail(data[i + 1]);
                     break;
                 case "Phone:":
-                    profile.setPhone(Long.parseLong(data[i+1]));
+                    profile.setPhone(Long.parseLong(data[i + 1]));
                     break;
                 default:
             }
